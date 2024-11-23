@@ -42,6 +42,7 @@ func (serviceCollectionBuilder *ServiceCollectionBuilder) addService(registratio
 		// do nothing
 	} else if reflect.TypeOf(registration).Kind() == reflect.Func {
 		serviceFactory, err = NewTypedFactoryFunc[any](registration)
+
 		if err != nil {
 			panic(err)
 		}

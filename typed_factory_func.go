@@ -1,6 +1,7 @@
 package gosc
 
 import (
+	// "fmt"
 	"reflect"
 )
 
@@ -33,12 +34,12 @@ func NewTypedFactoryFunc[T any](factoryFunction any) (ServiceFactory[T], error) 
 			callResults := factoryFuncValue.Call(args)
 			result := callResults[0]
 
-			if result.Kind() != reflect.Ptr {
-				value := result.Interface().(T)
-				return &value
-			}
+			result = goValueElemIfPointer(result)
+			result = goValuePointerIfElem(result)
 
-			return result.Interface().(*T)
+			value := result.Interface()
+			response := value.(T)
+			return &response
 		},
 	}
 
