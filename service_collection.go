@@ -46,18 +46,6 @@ func (serviceCollection *ServiceCollection) getService(reflectType reflect.Type)
 
 	elem := goValueElemIfPointer(reflect.ValueOf(response))
 	return elem.Interface()
-
-	/* fmt.Println()
-	fmt.Printf("|response: %v, %v\n", reflectType, reflectType)
-	fmt.Printf("|response: %v, %v\n", response, reflect.TypeOf(response))
-	fmt.Printf("|response: %v, %v\n", &response, reflect.TypeOf(&response))
-	fmt.Println() */
-
-	/* if reflectType.Kind() != reflect.Ptr {
-		return &response
-	} */
-
-	return response
 }
 
 func (serviceCollection *ServiceCollection) _getServiceSingleton(reflectType reflect.Type) *any {

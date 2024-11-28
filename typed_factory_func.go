@@ -1,7 +1,6 @@
 package gosc
 
 import (
-	// "fmt"
 	"reflect"
 )
 

@@ -5,19 +5,19 @@ import (
 )
 
 func TestFactoryFunc_NewFactoryFunc_WithNonFunction(t *testing.T) {
-	_, err := NewTypedFactoryFunc[any]("not a function")
+	_, err := NewFactoryFunc("not a function")
 	if err == nil {
 		t.Errorf("expected error, got nil")
 	}
 }
 
 func TestFactoryFunc_NewFactoryFunc_NumOutShouldBe1(t *testing.T) {
-	_, err := NewTypedFactoryFunc[any](func() (any, any) { return nil, nil })
+	_, err := NewFactoryFunc(func() (any, any) { return nil, nil })
 	if err == nil {
 		t.Errorf("expected error, got nil")
 	}
 
-	_, err = NewTypedFactoryFunc[any](func() {})
+	_, err = NewFactoryFunc(func() {})
 	if err == nil {
 		t.Errorf("expected error, got nil")
 	}

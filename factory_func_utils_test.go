@@ -30,16 +30,6 @@ func TestFactoryFuncUtils_validateNewFactoryFuncArg_factoryFuncTypeNumOutShouldB
 	}
 }
 
-type (
-	serviceInterface interface {
-		Get() int
-	}
-
-	serviceImplementation struct {
-		value int
-	}
-)
-
 func (s *serviceImplementation) Get() int {
 	return s.value
 }
