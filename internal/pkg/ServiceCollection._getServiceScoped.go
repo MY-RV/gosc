@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/MY-RV/gosc/scope_status"
+	"github.com/MY-RV/gosc/enums/scope_status"
 )
 
 func (serviceCollection *ServiceCollection) _getServiceScoped(reflectType reflect.Type) (*any, error) {

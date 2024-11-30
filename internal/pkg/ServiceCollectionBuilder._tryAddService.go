@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/MY-RV/gosc/scope"
+	"github.com/MY-RV/gosc/enums/scope"
 )
 
 func (serviceCollectionBuilder *ServiceCollectionBuilder) _tryAddService(registration any, scope scope.Enum) error {

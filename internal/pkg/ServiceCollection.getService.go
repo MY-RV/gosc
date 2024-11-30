@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"reflect"
 
+	"github.com/MY-RV/gosc/enums/scope"
 	"github.com/MY-RV/gosc/internal/helpers/pointer_helper"
-	"github.com/MY-RV/gosc/scope"
 )
 
 func (serviceCollection *ServiceCollection) getService(reflectType reflect.Type) (any, error) {
