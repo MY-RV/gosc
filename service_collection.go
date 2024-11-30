@@ -14,7 +14,7 @@ type ServiceCollection struct {
 	activeScopedServices    map[reflect.Type]*any
 
 	servicesDefinitions map[reflect.Type]ServiceDefinition
-	scopeStatus         int
+	scopeStatus         scope_status.Enum
 }
 
 func GetService[T Service](serviceCollection *ServiceCollection) T {

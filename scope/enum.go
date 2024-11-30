@@ -1,6 +1,8 @@
 package scope
 
+type Enum int
+
 const (
-	SINGLETON = iota
+	SINGLETON Enum = iota
 	SCOPED
 )

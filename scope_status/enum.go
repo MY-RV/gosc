@@ -1,6 +1,8 @@
 package scope_status
 
+type Enum int
+
 const (
-	INACTIVE = iota
+	INACTIVE Enum = iota
 	ACTIVE
 )

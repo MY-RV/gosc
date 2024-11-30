@@ -31,7 +31,7 @@ func (serviceCollectionBuilder *ServiceCollectionBuilder) AddScoped(registration
 	serviceCollectionBuilder.addService(registration, scope.SCOPED)
 }
 
-func (serviceCollectionBuilder *ServiceCollectionBuilder) addService(registration any, scope int) {
+func (serviceCollectionBuilder *ServiceCollectionBuilder) addService(registration any, scope scope.Enum) {
 	servicesDefinitions := serviceCollectionBuilder.serviceCollection.servicesDefinitions
 
 	var serviceFactory ServiceFactory[any]
