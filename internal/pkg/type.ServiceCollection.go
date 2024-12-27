@@ -3,11 +3,11 @@ package pkg
 import (
 	"reflect"
 
-	"github.com/MY-RV/gosc/enums/scope_status"
+	"github.com/MY-RV/gosc/enums/scopeStatus"
 )
 
 type ServiceCollection struct {
 	activeServices      ServiceCollectionActiveServices
 	servicesDefinitions map[reflect.Type]*ServiceDefinition[any]
-	scopeStatus         scope_status.Enum
+	scopeStatus         scopeStatus.Enum
 }

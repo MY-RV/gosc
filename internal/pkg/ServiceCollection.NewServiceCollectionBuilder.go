@@ -3,7 +3,7 @@ package pkg
 import (
 	"reflect"
 
-	"github.com/MY-RV/gosc/enums/scope_status"
+	"github.com/MY-RV/gosc/enums/scopeStatus"
 )
 
 func NewServiceCollectionBuilder() *ServiceCollectionBuilder {
@@ -15,7 +15,7 @@ func NewServiceCollectionBuilder() *ServiceCollectionBuilder {
 			},
 
 			servicesDefinitions: make(map[reflect.Type]*ServiceDefinition[any]),
-			scopeStatus:         scope_status.INACTIVE,
+			scopeStatus:         scopeStatus.INACTIVE,
 		},
 	}
 }
