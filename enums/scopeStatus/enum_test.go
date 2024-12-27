@@ -1,4 +1,4 @@
-package scope_status
+package scopeStatus
 
 import "testing"
 

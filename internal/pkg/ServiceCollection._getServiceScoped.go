@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/MY-RV/gosc/enums/scope_status"
+	"github.com/MY-RV/gosc/enums/scopeStatus"
 )
 
 func (serviceCollection *ServiceCollection) _getServiceScoped(reflectType reflect.Type) (*any, error) {
-	if serviceCollection.scopeStatus == scope_status.INACTIVE {
+	if serviceCollection.scopeStatus == scopeStatus.INACTIVE {
 		return nil, fmt.Errorf("scope is not active")
 	}
 

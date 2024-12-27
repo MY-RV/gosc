@@ -1,6 +1,8 @@
 package gosc
 
-import "github.com/MY-RV/gosc/internal/pkg"
+import "github.com/MY-RV/gosc/definitions"
+
+/* import "github.com/MY-RV/gosc/internal/pkg"
 
 type ServiceCollectionBuilder pkg.ServiceCollectionBuilder
 type ServiceCollection pkg.ServiceCollection
@@ -24,4 +26,8 @@ func FactoryFunc(factoryFunction any) *pkg.ServiceFactory[any] {
 
 func NewFactoryFunc(factoryFunction any) (*pkg.ServiceFactory[any], error) {
 	return pkg.NewFactoryFunc(factoryFunction)
+} */
+
+func NewDependencyCollectionBuilder() definitions.DependencyCollectionBuilder {
+	return nil
 }
