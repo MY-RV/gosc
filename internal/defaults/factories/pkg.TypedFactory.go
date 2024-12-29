@@ -6,4 +6,3 @@ import "github.com/MY-RV/gosc/definitions"
 type TypedFactory[T any] struct {
 	factoryFunction func(definitions.DependencyCollection) T
 }
-

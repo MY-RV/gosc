@@ -4,7 +4,7 @@ import (
 	"github.com/MY-RV/gosc/enums/scope"
 )
 
-type DependencyRegistry interface {
+type DependencyRecord interface {
 	GetFactory() Factory
 	GetScope() scope.Enum
 }
